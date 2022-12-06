@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+   background: url(https://i.pinimg.com/originals/f7/8c/8f/f78c8fc4d6b7414a2bb1cc2b1096720e.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+* {
+    box-sizing: border-box;
+}
+.form{
+    width: 100%;
+    padding: 10px;
+}
+.bloque1{
+    background: white;
+    margin-top: 100px;
+    padding: 3px;
+}
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+input[type="email1"],
+input[type="password1"]{
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+}
+.contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+
+.ingresar{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ingresar:hover{
+    background: cadetblue;
+}
+
+.texto{
+    font-size: 20px;
+    margin: 15px;
+    text-align: justify;
+}
+
+p{
+    text-align: center;
+}
+input[type="email"],
+input[type="password"]{
+    font-size: 20px;
+    width: 100%;
+    padding: 15px;
+}
+.limpiar{
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    background:  #309dc9;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.limpiar:hover{
+    background: rgb(114, 206, 209);
+}
+
+.google{
+    border: none;
+    width: 100%;
+    font-size: 13px;
+    background-color: #aaa;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+      color: #1a2537;
+    font-weight: 600;
+}
+.link:hover{
+     color: cadetblue;
+}
+@media(min-width:768px)
+{
+    .bloque1{
+        margin: auto;
+        width: 500px;
+        margin-top: 15px;
+        border-radius: 2%;
+    }
+}
