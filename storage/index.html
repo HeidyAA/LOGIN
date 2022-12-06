@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar imágenes y videos</title>
+</head>
+<body>
+    <!-- Agregar un boton para Agregar imagenes o videos -->
+    <input type="file" name="" id="img">
+    <br>
+    <button id="boton"> SUBIR </button>
+
+
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCkh6vNRhs4-ZfMd-SdluAPDs_2Bt7Iqk8",
+          authDomain: "luna-20494.firebaseapp.com",
+          projectId: "luna-20494",
+          storageBucket: "luna-20494.appspot.com",
+          messagingSenderId: "466404284953",
+          appId: "1:466404284953:web:7ca36eb1d1bf29b0e9e888"
+        };
+      
+        // Initialize Firebase y Storage
+        const app = initializeApp(firebaseConfig);
+        const storage = getStorage(app);
+
+        //Creamos un evento para que al oprimir el botón se guarde la información
+        document.getElementById("boton").addEventListener("click",function(){
+            //Se crea una variable que guardará los archivos subidos y almacena en una lista
+            var file = document.getElementById("img").file[0]
+
+            const storage = getStorage();
+            const storageRef = ref(storage, 'uploadedimage');
+
+// 'file' comes from the Blob or File API
+            uploadBytes(storageRef, file).then((snapshot) => {
+            console.log('Uploaded a blob or file!');
+            alert("El archivo está cargado")
+            });
+        })
+
+      </script>
+
+</body>
+</html>
